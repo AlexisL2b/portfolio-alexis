@@ -9,6 +9,4 @@ export default function App() {
     </AppStyled>
   )
 }
-const AppStyled = styled.div`
-  /* width: 100%; */
-`
+const AppStyled = styled.div``
