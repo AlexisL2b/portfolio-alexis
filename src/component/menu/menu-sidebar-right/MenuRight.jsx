@@ -1,7 +1,7 @@
 import React from "react"
 import { styled } from "styled-components"
-import MenuButton from "./MenuButton"
-import { getMenuButtonsConfig } from "./menuButtonConfig"
+import MenuButton from "../MenuButton"
+import { getMenuButtonsConfig } from "../menuButtonConfig"
 
 export default function Menu() {
   const buttons = getMenuButtonsConfig()

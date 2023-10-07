@@ -1,8 +1,8 @@
 import React from "react"
 import { styled } from "styled-components"
-import LabelPost from "../../../../reusable-ui/LabelPost"
-import Button from "../../../../reusable-ui/Button"
-import { theme } from "../../../../../theme"
+import LabelPost from "../../../reusable-ui/LabelPost"
+import Button from "../../../reusable-ui/Button"
+import { theme } from "../../../../theme"
 
 export default function Welcome() {
   return (

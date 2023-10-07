@@ -1,7 +1,7 @@
 import React from "react"
 import { styled } from "styled-components"
 import Welcome from "./Welcome"
-import { theme } from "../../../../../theme"
+import { theme } from "../../../../theme"
 
 export default function LeftSideHome() {
   return (

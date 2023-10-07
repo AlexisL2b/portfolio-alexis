@@ -1,11 +1,13 @@
 import React from "react"
 import FirstPage from "./component/pages/FirstPage"
 import { styled } from "styled-components"
+import SecondPage from "./component/pages/SecondPage"
 
 export default function App() {
   return (
     <AppStyled>
       <FirstPage />
+      <SecondPage />
     </AppStyled>
   )
 }
