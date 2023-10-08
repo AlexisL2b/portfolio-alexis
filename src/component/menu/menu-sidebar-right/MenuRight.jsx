@@ -2,14 +2,20 @@ import React from "react"
 import { styled } from "styled-components"
 import MenuButton from "../MenuButton"
 import { getMenuButtonsConfig } from "../menuButtonConfig"
+import { MdContactSupport } from "react-icons/md"
+import Doted from "../../reusable-ui/Doted"
 
 export default function Menu() {
   const buttons = getMenuButtonsConfig()
   return (
     <MenuStyled>
       {buttons.map((button) => (
-        <MenuButton icon={button.icon} />
+        <div>
+          <MenuButton icon={button.icon} key={button.id} />
+          <Doted version={"right"} />
+        </div>
       ))}
+      <MenuButton icon={<MdContactSupport />} key={5} />
     </MenuStyled>
   )
 }
@@ -25,6 +31,6 @@ const MenuStyled = styled.div`
   background-color: #ffba31;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `
