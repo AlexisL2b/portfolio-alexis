@@ -7,7 +7,7 @@ export default function MenuLeft() {
     <MenuLeftStyled>
       <div className="img">
         <img
-          src="src\assets\men-face-black-monochrome-portrait-actor-222773-wallhere.com.jpg"
+          src="https://davidferriere.com/wp-content/uploads/2017/04/20170425_PORTRAIT_CV_PRO_RENNES-001.jpg"
           alt=""
         />
       </div>
@@ -17,7 +17,7 @@ export default function MenuLeft() {
 }
 const MenuLeftStyled = styled.div`
   height: 100vh;
-  width: 40vh;
+  width: auto;
   background-color: #ffba31;
   display: flex;
   flex-direction: column;

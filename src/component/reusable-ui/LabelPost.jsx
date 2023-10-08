@@ -20,7 +20,17 @@ const primary = css`
   letter-spacing: 0px;
   border-radius: 2px;
 `
+const secondary = css`
+  background-color: #ffba31;
+  font-family: ${theme.fonts.anton};
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  border-radius: 2px;
+  color: white;
+`
 
 const extraStyle = {
   primary,
+  secondary,
 }

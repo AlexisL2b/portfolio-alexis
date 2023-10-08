@@ -5,7 +5,7 @@ export default function RightSideHome() {
   return (
     <RightSideHomeStyled>
       <img
-        src="src\assets\men-face-black-monochrome-portrait-actor-222773-wallhere.com.jpg"
+        src="https://davidferriere.com/wp-content/uploads/2017/04/20170425_PORTRAIT_CV_PRO_RENNES-001.jpg"
         alt=""
       />
     </RightSideHomeStyled>

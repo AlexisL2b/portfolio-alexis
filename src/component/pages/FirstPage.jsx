@@ -14,6 +14,7 @@ export default function FirstPage() {
 const FirstPageStyled = styled.div`
   position: relative;
   background-color: #dddddd;
+
   width: 100%;
   height: 100vh;
 `

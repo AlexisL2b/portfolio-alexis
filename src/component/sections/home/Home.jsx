@@ -13,7 +13,7 @@ export default function Home() {
 
 const HomeStyled = styled.div`
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 `
