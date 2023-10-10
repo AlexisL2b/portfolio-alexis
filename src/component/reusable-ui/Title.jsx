@@ -9,7 +9,7 @@ export default function Title({ label }) {
 const TitleStyled = styled.div`
   /* align-items: center;
   justify-content: center; */
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
   border: dotted black 3px;
   text-align: center;
   font-size: 64px;

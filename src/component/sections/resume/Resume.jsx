@@ -12,8 +12,7 @@ export default function Resume() {
   )
 }
 const ResumeStyled = styled.div`
-  height: 1180px;
-  height: 1180px;
+  height: 100%;
   display: grid;
   grid-template-rows: 1fr 4fr;
 `

@@ -13,8 +13,12 @@ export default function Main() {
   )
 }
 const MainStyled = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 50px 100px;
   overflow: hidden;
   overflow-y: scroll;
+  scrollbar-width: none;
+  gap: 250px;
 `
