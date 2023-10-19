@@ -7,7 +7,6 @@ import Main from "./main/Main"
 export default function SecondPage() {
   return (
     <SecondPageStyled>
-      <Menu />
       <MenuLeft />
       <Main />
     </SecondPageStyled>

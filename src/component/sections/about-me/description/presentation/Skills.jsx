@@ -1,82 +1,61 @@
 import React, { useState } from "react"
 import { styled } from "styled-components"
 import { getDeepClone } from "../../../../../utils/window"
+import { getTechIcon } from "./skillsConfig"
+import JsLibrary from "./JsLibrary"
+import Tech from "./Tech"
 
 export default function Skills() {
   const [isSelected, setIsSelected] = useState("")
+  const [isSelectedLibrary, setIsSelectedLibrary] = useState("")
 
   const onClick = (e) => {
     // const copyIsSelected = getDeepClone(isSelected)
     // copyIsSelected.splice(0, copyIsSelected.length)
     // copyIsSelected.push(e.currentTarget.alt)
     setIsSelected(e.currentTarget.alt)
+    setIsSelectedLibrary("")
     console.log(isSelected)
   }
+  const onClickLibrary = (e) => {
+    setIsSelectedLibrary(e.currentTarget.alt)
+
+    console.log(isSelectedLibrary)
+  }
+  const techIcons = getTechIcon()
+
   return (
     <SkillsStyled selected={isSelected}>
       <div className="left_side">
-        <div className="first_icon">
-          <img
-            onClick={onClick}
-            className="icon js"
-            src="src\assets\kisspng-javascript-portable-network-graphics-logo-clip-art-javascript-programs-amp-output-apps-on-google-5b69409b183213.5468079715336244750991.png"
-            alt="js"
+        {techIcons.map((icon) => (
+          <Tech
+            key={icon.id}
+            src={icon.src}
+            alt={icon.alt}
+            onClick={(e) => onClick(e)}
           />
-        </div>
-        <div className="second_icon">
-          <img
-            onClick={onClick}
-            className="icon css"
-            src="src\assets\kisspng-responsive-web-design-cascading-style-sheets-css3-5af3bcd38ce761.4872052615259230275772.png"
-            alt="css"
-          />
-        </div>
-        <div className="third_icon">
-          <img
-            onClick={onClick}
-            className="icon html"
-            src="src\assets\kisspng-responsive-web-design-html-computer-icons-css3-wor-css-5ada2556b56739.2541863015242458467431.png"
-            alt="html"
-          />
-        </div>
-        <div className="fourth_icon">
-          <img
-            onClick={onClick}
-            className="icon php "
-            src="src\assets\kisspng-php-joomla-installation-hhvm-content-management-sy-5b00d8b1c3b063.0435587815267821298016.png"
-            alt="php"
-          />
-        </div>
+        ))}
+        {/* <Tech
+          onClick={onClick}
+          selected={isSelected}
+          version={isSelected ? "selected" : ""}
+        /> */}
       </div>
       <div className="right_side">
         <div className="library">
-          {isSelected === "js" ? (
-            <div className="js_library">
-              <img
-                className="icon_library"
-                src="src\assets\kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png"
-                alt=""
-              />
-              <img
-                className="icon_library"
-                src="src\assets\kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png"
-                alt=""
-              />
-              <img
-                className="icon_library"
-                src="src\assets\kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png"
-                alt=""
-              />
-              <img
-                className="icon_library"
-                src="src\assets\kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png"
-                alt=""
-              />
-            </div>
-          ) : null}
+          {isSelected === "js" ? <JsLibrary onClick={onClickLibrary} /> : null}
           {isSelected === "html" ? <div className="rouge">aa</div> : null}
         </div>
-        <div className="desc_library"></div>
+        <div className="desc_library">
+          {isSelectedLibrary === "react" ? (
+            <span>reaaaaaaaaaaaaaaaact</span>
+          ) : null}
+          {isSelectedLibrary === "calendar" ? (
+            <span>calendaaaaaaaaaaaaaaaaaaaaar</span>
+          ) : null}
+          {isSelectedLibrary === "jquerry" ? <span>jquerry</span> : null}
+          {isSelected === "html" ? <span>html</span> : null}
+        </div>
       </div>
     </SkillsStyled>
   )
@@ -84,7 +63,7 @@ export default function Skills() {
 const SkillsStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: black;
+  /* background-color: black; */
   .js_library {
     display: flex;
     gap: 15px;
@@ -97,7 +76,6 @@ const SkillsStyled = styled.div`
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     place-content: center;
-
     .icon {
       cursor: pointer;
       height: 130px;
@@ -110,6 +88,10 @@ const SkillsStyled = styled.div`
         filter: grayscale(0%);
         opacity: 100%;
       }
+      /* &:active {
+        filter: grayscale(0%);
+        opacity: 100%;
+      } */
     }
     .${(props) => props.selected} {
       filter: grayscale(0%);
@@ -124,6 +106,14 @@ const SkillsStyled = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      .icon_library {
+        border-radius: 30%;
+        transition: transform 300ms ease;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
       .jaune {
         background: yellow;
       }
@@ -133,6 +123,7 @@ const SkillsStyled = styled.div`
     }
     .desc_library {
       border: 1px solid blue;
+      color: white;
     }
   }
 `
