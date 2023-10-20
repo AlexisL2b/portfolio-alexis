@@ -1,9 +1,9 @@
 import React from "react"
 import { styled } from "styled-components"
 
-export default function MenuButton({ icon }) {
+export default function MenuButton({ icon, onClick, id }) {
   return (
-    <MenuButtonStyled>
+    <MenuButtonStyled onClick={onClick} id={id}>
       <i>{icon}</i>
     </MenuButtonStyled>
   )

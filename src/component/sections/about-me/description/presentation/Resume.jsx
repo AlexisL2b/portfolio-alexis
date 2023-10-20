@@ -40,10 +40,8 @@ export default function Resume() {
 const ResumeStyled = styled.div`
   display: grid;
   grid-template-rows: 1fr 2fr 2fr 2fr;
-  border: 1px solid red;
   .title_resume {
     font-size: 32px;
-    border: 1px solid pink;
     font-family: ${theme.fonts.anton};
     font-weight: 900;
     margin-left: 10px;

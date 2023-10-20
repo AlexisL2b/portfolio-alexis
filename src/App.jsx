@@ -8,17 +8,17 @@ import { CSSTransition } from "react-transition-group"
 export default function App() {
   return (
     <AppStyled>
-      <CSSTransition
+      {/* <CSSTransition
         in={true}
         appear={true}
         timeout={700}
         classNames="slide-in-blurred-right"
       >
         <Menu />
-      </CSSTransition>
+      </CSSTransition> */}
 
       <FirstPage />
-      <SecondPage />
+      {/* <SecondPage /> */}
     </AppStyled>
   )
 }
@@ -42,4 +42,5 @@ const AppStyled = styled.div`
     filter: blur(0);
     opacity: 1;
   }
+  scrollbar-width: none;
 `

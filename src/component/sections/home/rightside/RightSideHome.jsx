@@ -5,16 +5,16 @@ import { styled } from "styled-components"
 export default function RightSideHome() {
   return (
     <TransitionGroup component={RightSideHomeStyled}>
-      <CSSTransition
+      {/* <CSSTransition
         appear={true}
         timeout={1000} // La durée de votre animation en ms
         classNames="text-focus-in"
       >
         <img
-          src="https://davidferriere.com/wp-content/uploads/2017/04/20170425_PORTRAIT_CV_PRO_RENNES-001.jpg"
+          src="src\assets\Naked_technologycodingprojectTransparent_background_4e9cdd0d-c102-4d95-abfc-3a57fb984e76-removebg-preview.png"
           alt=""
         />
-      </CSSTransition>
+      </CSSTransition> */}
     </TransitionGroup>
   )
 }
@@ -26,6 +26,7 @@ const RightSideHomeStyled = styled.div`
     width: 100%;
     height: 100%;
     object-fit: contain;
+    opacity: 0.5;
   }
   .text-focus-in-appear {
     -webkit-filter: blur(12px);

@@ -18,17 +18,6 @@ export default function Welcome() {
           <div className="presentation">
             JE SUIS <span className="firstname">ALEXIS</span>
           </div>
-          <LabelPost version="primary" label="DÉVELOPPEUR WEB FRONT-END " />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem
-            inventore voluptatibus consequatur ratione obcaecati maxime
-            reiciendis officiis quibusdam esse deleniti dolorum nemo tenetur,
-            adipisci repudiandae dolorem quae expedita at necessitatibus
-            accusamus nam veniam! Molestiae dolor iure recusandae, eveniet,
-            perferendis, alias minima error rerum corrupti quae enim officiis
-            cum adipisci!
-          </p>
-          <Button version="primaryRounded" label={"EN SAVOIR PLUS SUR MOI"} />
         </div>
       </CSSTransition>
     </TransitionGroup>
@@ -43,14 +32,14 @@ const WelcomeStyled = styled.div`
   .surtitle {
     font-family: ${theme.fonts.anton};
     font-weight: 900;
-    font-size: 48px;
-    color: black;
+    font-size: 56px;
+    color: #ffffff;
   }
   .presentation {
     font-family: ${theme.fonts.anton};
     font-weight: 900;
     font-size: 56px;
-    color: black;
+    color: #ffffff;
     .firstname {
       font-family: "Big Shoulders Stencil Text", " cursive";
       font-weight: 900;
@@ -68,5 +57,9 @@ const WelcomeStyled = styled.div`
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
+  }
+
+  p {
+    color: white;
   }
 `

@@ -33,7 +33,7 @@ export const getLibraryIcon = () => [
   },
   {
     className: "icon_library",
-    src: "src/assets/fullcalendar-removebg-preview.png",
+    src: "src/assets/7d1b800c8515be9b4183.png",
     alt: "calendar",
   },
   {

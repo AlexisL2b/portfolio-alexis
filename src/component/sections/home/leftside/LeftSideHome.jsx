@@ -12,7 +12,6 @@ export default function LeftSideHome() {
 }
 
 const LeftSideHomeStyled = styled.div`
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;

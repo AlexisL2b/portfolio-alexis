@@ -68,7 +68,6 @@ const ResumeDescStyled = styled.div`
   grid-template-rows: repeat(2, 1fr);
   .divider {
     position: absolute;
-    border: 1px solid red;
     width: 100%;
   }
   .title_div {

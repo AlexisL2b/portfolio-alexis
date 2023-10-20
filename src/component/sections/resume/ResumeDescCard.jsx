@@ -19,7 +19,6 @@ export default function ResumeDescCard({
   )
 }
 const ResumeDescCardStyled = styled.div`
-  border: 1px solid blue;
   height: 250px;
   align-self: center;
   .title {

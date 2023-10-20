@@ -8,14 +8,13 @@ export default function PresentationAboutMe() {
   return (
     <PresentationAboutMeStyled>
       <Skills />
-      <Resume />
+      {/* <Resume /> */}
     </PresentationAboutMeStyled>
   )
 }
 const PresentationAboutMeStyled = styled.div`
-  border: 1px solid blue;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* grid-template-columns: 3fr 1fr; */
   column-gap: 20px;
 
   .resume {
