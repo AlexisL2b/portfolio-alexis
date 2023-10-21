@@ -6,59 +6,78 @@ import { animations } from "../../../../theme/animations"
 
 export default function IntroductionAboutMe() {
   return (
-    <TransitionGroup component={IntroductionAboutMeStyled}>
-      {/* <CSSTransition
-        in={true}
-        appear={true}
-        classNames={"title-animated"}
-        timeout={1400}
-      > */}
-      <span className="title">
-        Je m'appelle <div className="firstname"> Alexis Luigi, </div>
-        je suis développeur Web junior!
-      </span>
-      {/* </CSSTransition> */}
-      {/* <CSSTransition
-        in={true}
-        appear={true}
-        classNames={"content-animated"}
-        timeout={1400}
-      >
-        <p className="content-p">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-          sapiente minima deleniti modi cupiditate sint magnam consequatur
-          doloribus voluptates sed, amet odit ipsum obcaecati corporis quod, in
-          quia. Ab nisi doloribus earum porro minus praesentium dolore facilis
-          aliquam molestiae quaerat consectetur sunt distinctio eius,
-          repellendus quos debitis animi eaque sit! doloribus voluptates sed,
-          amet odit ipsum obcaecati corporis quod, in quia. Ab nisi doloribus
-          earum porro minus praesentium dolore facilis aliquam molestiae quaerat
-        </p>
-      </CSSTransition> */}
-    </TransitionGroup>
+    <IntroductionAboutMeStyled>
+      <div className="title">
+        <h2>INFORMATION PERSONNEL</h2>
+      </div>
+      <ul>
+        <li>
+          Prénom:&nbsp;
+          <span className="response"> Alexis</span>
+        </li>
+        <li>
+          Âge:&nbsp;
+          <span className="response">26 ans</span>
+        </li>
+        <li>
+          Nationalité:&nbsp;
+          <span className="response">Francais</span>
+        </li>
+        <li>
+          Freelance:&nbsp;
+          <span className="response">Disponible</span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Nom:&nbsp;
+          <span className="response">Luigi</span>
+        </li>
+
+        <li>
+          Langues:&nbsp;
+          <span className="response">Francais, Anglais</span>
+        </li>
+        <li>
+          Adresse:&nbsp;
+          <span className="response">Corse</span>
+        </li>
+        <li>
+          Email:&nbsp;
+          <span className="response">alexisl2b@outlook.fr</span>
+        </li>
+      </ul>
+    </IntroductionAboutMeStyled>
   )
 }
 const IntroductionAboutMeStyled = styled.div`
-  height: 50px;
-  align-items: center;
-  display: flex;
+  height: 300px;
+  width: 55%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
   justify-content: center;
-  .title {
-    display: flex;
-    font-family: ${theme.fonts.anton};
-    font-size: 40px;
-
-    .firstname {
-      /* text-align: center; */
-      font-weight: 900;
-      text-align: center;
-      margin: -9px 5px;
-      color: #ffba31;
-    }
-  }
-  .content-p {
+  padding: 16px;
+  li {
+    color: white;
+    font-weight: 700;
     font-size: 16px;
+    margin: 15px 0px;
   }
-  ${animations.introContent}
-  ${animations.introTitle}
+
+  .response {
+    color: #ffba31;
+    font-weight: 700;
+  }
+  .title {
+    grid-column: span 2;
+    margin: auto;
+    text-align: center;
+  }
 `

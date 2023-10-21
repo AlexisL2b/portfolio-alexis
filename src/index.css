@@ -4,6 +4,9 @@
   padding: 0px;
   scrollbar-width: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 a,
 a:hover,

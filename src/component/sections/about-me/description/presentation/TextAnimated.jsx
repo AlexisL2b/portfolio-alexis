@@ -18,7 +18,7 @@ export default function TextAnimated({ content, title }) {
 
       <CSSTransition
         in={true}
-        timeout={500}
+        timeout={1000}
         appear={true}
         classNames={"span-focus-in"}
       >
@@ -70,10 +70,10 @@ export const textAnimation = css`
     transform: translateZ(400px);
     opacity: 0;
   }
-  .tracking-in-contract-bck-appear-active {
+  /* .tracking-in-contract-bck-appear-active {
     transition: 300ms;
     opacity: 0;
-  }
+  } */
   .tracking-in-contract-bck-appear-done {
     transition: 1000ms;
 
