@@ -8,7 +8,8 @@ export default function LabelPost({ version, label }) {
 const LabelPostStyled = styled.div`
   padding: 4px 8px;
   display: inline-block;
-  text-align: center;
+
+  white-space: nowrap;
 
   ${({ version }) => extraStyle[version]}
 `
@@ -19,6 +20,8 @@ const primary = css`
   font-weight: 900;
   letter-spacing: 0px;
   border-radius: 2px;
+  text-align: center;
+  justify-content: center;
 `
 const secondary = css`
   background-color: #ffba31;
@@ -28,9 +31,24 @@ const secondary = css`
   letter-spacing: 0px;
   border-radius: 2px;
   color: white;
+  text-align: center;
+  justify-content: center;
+`
+const secondarySmall = css`
+  background-color: #ffba31;
+  font-family: ${theme.fonts.anton};
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  width: 40%;
 `
 
 const extraStyle = {
   primary,
   secondary,
+  secondarySmall,
 }

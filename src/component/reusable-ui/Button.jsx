@@ -21,6 +21,19 @@ const primaryRounded = css`
   color: white;
   cursor: pointer;
 `
+const primaryRoundedMedium = css`
+  background-color: #ffba31;
+  border: none;
+  border-radius: 20px;
+  font-family: ${theme.fonts.anton};
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  width: 50%;
+  align-self: center;
+`
 const extraStyle = {
   primaryRounded,
+  primaryRoundedMedium,
 }

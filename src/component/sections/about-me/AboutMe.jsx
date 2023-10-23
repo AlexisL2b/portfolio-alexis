@@ -13,7 +13,7 @@ export default function AboutMe({ className }) {
       <Title
         label={"ABOUT ME"}
         className={"puff-in-center "}
-        undertitle={"RESUME"}
+        undertitle={"PROFILE"}
       />
 
       <div className="intro">
@@ -23,7 +23,7 @@ export default function AboutMe({ className }) {
       <Title
         label={"ABOUT ME"}
         className={"puff-in-center "}
-        undertitle={"RESUME"}
+        undertitle={"PROFILE"}
       />
     </AboutMeStyled>
   )

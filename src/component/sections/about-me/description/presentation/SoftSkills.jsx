@@ -55,8 +55,9 @@ const SoftSkillsStyled = styled.div`
   .title {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -75%);
+    transform: translate(-50%, -85%);
     letter-spacing: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
   }
   .section {
     padding: 8px;
@@ -78,6 +79,7 @@ const SoftSkillsStyled = styled.div`
     .card_title {
       color: #ffba31;
       margin-bottom: 10px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
     }
   }
   .haut_gauche {

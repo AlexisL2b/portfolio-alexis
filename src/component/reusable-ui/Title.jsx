@@ -20,6 +20,7 @@ const TitleStyled = styled.div`
   .title {
     position: relative;
     z-index: 1;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
   }
   .under-title {
     /* z-index: -1 */

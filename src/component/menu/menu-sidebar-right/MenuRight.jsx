@@ -27,6 +27,8 @@ export default function Menu() {
               key={button.id}
               onClick={onClick}
               id={button.name}
+              component={button.component}
+              data-component={button.component}
             />
             <Doted version={"right"} />
           </div>
@@ -44,7 +46,7 @@ const MenuStyled = styled.div`
   padding: 24px 0px;
   position: fixed;
   width: 50px;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   flex-direction: column;
   justify-content: center;

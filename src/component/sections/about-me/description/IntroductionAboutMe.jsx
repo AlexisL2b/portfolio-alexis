@@ -64,6 +64,8 @@ const IntroductionAboutMeStyled = styled.div`
   /* align-items: center; */
   justify-content: center;
   padding: 16px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+
   li {
     color: white;
     font-weight: 700;
