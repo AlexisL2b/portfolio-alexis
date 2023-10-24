@@ -4,6 +4,7 @@ import LeftSideSkills from "./LeftSideSkills"
 import RightSideSkills from "./RightSideSkills"
 import { TransitionGroup } from "react-transition-group"
 import CircularProgressBar from "../../../../../reusable-ui/CircularProgressBar"
+import Title from "../../../../../reusable-ui/Title"
 
 export default function Skills() {
   const [isSelected, setIsSelected] = useState("")
@@ -21,13 +22,6 @@ export default function Skills() {
 
   return (
     <SkillsStyled selected={isSelected} className="skills">
-      {/* <LeftSideSkills selected={isSelected} onClick={onClick} />
-
-      <RightSideSkills
-        onClick={onClickLibrary}
-        tech={isSelected}
-        library={isSelectedLibrary}
-      /> */}
       <CircularProgressBar
         tech={"html"}
         color={"#f75421"}
@@ -100,14 +94,9 @@ const SkillsStyled = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /////
   width: 1240px;
   height: 620px;
   align-self: center;
   justify-self: center;
+  margin-top: 50px;
 `
-// -webkit-border-radius: 50px;
-// border-radius: 50px;
-// background: #4a4a4a;
-// -webkit-box-shadow: 12px 12px 24px #3f3f3f, -12px -12px 24px #555555;
-// box-shadow: 12px 12px 24px #3f3f3f, -12px -12px 24px #555555;

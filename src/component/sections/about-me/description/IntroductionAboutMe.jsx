@@ -40,7 +40,7 @@ export default function IntroductionAboutMe() {
         </li>
         <li>
           Adresse:&nbsp;
-          <span className="response">Corse</span>
+          <span className="response">L'ile-rousse, Corse</span>
         </li>
         <li>
           Email:&nbsp;
@@ -51,8 +51,8 @@ export default function IntroductionAboutMe() {
   )
 }
 const IntroductionAboutMeStyled = styled.div`
-  height: 300px;
-  width: 55%;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2.5px);
@@ -69,7 +69,7 @@ const IntroductionAboutMeStyled = styled.div`
   li {
     color: white;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 28px;
     margin: 15px 0px;
   }
 
@@ -77,9 +77,16 @@ const IntroductionAboutMeStyled = styled.div`
     color: #ffba31;
     font-weight: 700;
   }
+
   .title {
     grid-column: span 2;
-    margin: auto;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translate(-50%, -85%);
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
     text-align: center;
   }
 `

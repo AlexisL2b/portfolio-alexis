@@ -9,63 +9,68 @@ import FirstPageContext from "./FirstPageContext"
 import Skills from "../sections/about-me/description/presentation/skills/Skills"
 import CircularProgressBar from "../reusable-ui/CircularProgressBar"
 import CasinoEffect from "./second-page/main/Main"
+import Carousel from "../sections/Carousel"
+import SkillsSet from "../sections/about-me/description/presentation/skills/SkillsSet"
+import Project from "../sections/project/Project"
 
 export default function FirstPage() {
   const [section, setSection] = useState("")
   const [showModal, setShowModal] = useState("")
 
-  const [] = [<Menu />]
   const FirstPageValue = { section, setSection, showModal, setShowModal }
-  const renderComponent = (currentSection) => {
-    switch (currentSection) {
-      case "aboutme":
-        return <AboutMe />
-      case "resume":
-        return <Resume />
-      case "skills":
-        return <Skills />
-      // ... ajoutez d'autres cas si nécessaire
-      default:
-        return <Home />
-    }
-  }
+
   return (
-    <FirstPageStyled>
+    <TransitionGroup component={FirstPageStyled}>
       <FirstPageContext.Provider value={FirstPageValue}>
         <Menu />
-        {section === "" && <Home />}
-        {section === "aboutme" && (
+        {section === "" && (
           <CSSTransition
             appear={true}
             classNames={"puff-in-center"}
             timeout={700}
-            in={section === "aboutme"}
+            in={section === "" ? true : false}
           >
-            <AboutMe />
+            <Home />
           </CSSTransition>
         )}
-        {section === "resume" && (
-          <CSSTransition
-            appear={true}
-            classNames={"puff-in-center"}
-            timeout={700}
-            in={section === "resume"}
-          >
-            <Resume />
-          </CSSTransition>
-        )}
-        {section === "skills" && (
-          <CSSTransition
-            appear={true}
-            classNames={"puff-in-center"}
-            timeout={700}
-            in={section === "skills"}
-          >
-            <Skills />
-          </CSSTransition>
-        )}
+        <CSSTransition
+          appear={true}
+          classNames={"puff-in-center"}
+          timeout={700}
+          in={section === "aboutme" ? true : false}
+          unmountOnExit
+        >
+          <AboutMe />
+        </CSSTransition>
+        <CSSTransition
+          appear={true}
+          classNames={"puff-in-center"}
+          timeout={700}
+          in={section === "resume" ? true : false}
+          unmountOnExit
+        >
+          <Resume />
+        </CSSTransition>
+        <CSSTransition
+          appear={true}
+          classNames={"puff-in-center"}
+          timeout={700}
+          in={section === "skills" ? true : false}
+          unmountOnExit
+        >
+          <SkillsSet />
+        </CSSTransition>
+        <CSSTransition
+          appear={true}
+          classNames={"puff-in-center"}
+          timeout={700}
+          in={section === "project" ? true : false}
+          unmountOnExit
+        >
+          <Project />
+        </CSSTransition>
       </FirstPageContext.Provider>
-    </FirstPageStyled>
+    </TransitionGroup>
   )
 }
 
@@ -107,8 +112,13 @@ const FirstPageStyled = styled.div`
     transform: translateY(0%);
     transition: 0.7s;
   }
+  .puff-in-center-enter-done {
+    transform: translateY(0%);
+    transition: 0.7s;
+  }
 
   .puff-in-center-exit {
+    position: absolute;
     transform: translateY(0);
     opacity: 1;
   }

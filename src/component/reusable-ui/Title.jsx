@@ -2,11 +2,14 @@ import React from "react"
 import { styled } from "styled-components"
 import { theme } from "../../theme"
 
-export default function Title({ label, undertitle }) {
+export default function Title({ labelprimary, labelsecondary, undertitle }) {
   return (
     <TitleStyled>
       <div className="under-title">{undertitle}</div>
-      <div className="title">{label}</div>
+      <div className="title">
+        <span className="label1">{labelprimary} </span>
+        <span className="label2">{labelsecondary} </span>
+      </div>
     </TitleStyled>
   )
 }
@@ -21,7 +24,11 @@ const TitleStyled = styled.div`
     position: relative;
     z-index: 1;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+    .label2 {
+      color: #ffba31;
+    }
   }
+
   .under-title {
     /* z-index: -1 */
     position: absolute;

@@ -11,7 +11,8 @@ export default function AboutMe({ className }) {
   return (
     <AboutMeStyled className={className}>
       <Title
-        label={"ABOUT ME"}
+        labelprimary={"ABOUT"}
+        labelsecondary={" ME"}
         className={"puff-in-center "}
         undertitle={"PROFILE"}
       />
@@ -20,18 +21,13 @@ export default function AboutMe({ className }) {
         <IntroductionAboutMe />
         <SoftSkills />
       </div>
-      <Title
-        label={"ABOUT ME"}
-        className={"puff-in-center "}
-        undertitle={"PROFILE"}
-      />
     </AboutMeStyled>
   )
 }
 const AboutMeStyled = styled.div`
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr;
   place-items: center;
   color: white;
   align-items: flex-start;

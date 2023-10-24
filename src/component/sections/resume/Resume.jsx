@@ -7,7 +7,11 @@ import ResumeCard from "./ResumeCard"
 export default function Resume() {
   return (
     <ResumeStyled>
-      <Title label={"EXPERIENCE"} undertitle={"RESUME"} />
+      <Title
+        labelprimary={"MY "}
+        labelsecondary={"EXPERIENCE"}
+        undertitle={"RESUME"}
+      />
       {/* <ResumeDesc /> */}
       <div className="row experience">
         <ResumeCard

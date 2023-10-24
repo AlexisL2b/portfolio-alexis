@@ -46,7 +46,7 @@ export default function SoftSkills() {
 }
 const SoftSkillsStyled = styled.div`
   height: 100%;
-  width: 70%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -58,6 +58,7 @@ const SoftSkillsStyled = styled.div`
     transform: translate(-50%, -85%);
     letter-spacing: 10px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+    font-size: 28px;
   }
   .section {
     padding: 8px;
@@ -75,6 +76,7 @@ const SoftSkillsStyled = styled.div`
     .desc {
       z-index: 2;
       text-align: start;
+      font-size: 20px;
     }
     .card_title {
       color: #ffba31;
@@ -88,9 +90,10 @@ const SoftSkillsStyled = styled.div`
     img {
       position: absolute;
       height: 90px;
-      left: -15%;
+      left: -12%;
       transform: translateY(-85%);
       filter: blur(0.5px);
+      top: 17%;
     }
   }
   .haut_droite {
@@ -98,7 +101,7 @@ const SoftSkillsStyled = styled.div`
       position: absolute;
       height: 90px;
       left: 75%;
-      transform: translateY(-85%);
+      transform: translateY(-75%);
       filter: blur(0.5px);
     }
   }
@@ -116,7 +119,7 @@ const SoftSkillsStyled = styled.div`
     img {
       position: absolute;
       height: 90px;
-      left: -20%;
+      left: -13%;
       transform: translateY(85%);
       filter: blur(0.5px);
     }
