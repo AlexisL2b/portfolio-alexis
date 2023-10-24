@@ -11,9 +11,11 @@ export default function TextAnimated({ content, title }) {
         appear={true}
         classNames={"tracking-in-contract-bck"}
       >
-        <div className="title">
-          <h1>{title}</h1>
-        </div>
+        {title && (
+          <div className="title">
+            <h1>{title}</h1>
+          </div>
+        )}
       </CSSTransition>
 
       <CSSTransition
