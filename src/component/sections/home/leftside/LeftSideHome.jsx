@@ -12,6 +12,7 @@ export default function LeftSideHome() {
 }
 
 const LeftSideHomeStyled = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -19,8 +19,23 @@ export default function Project() {
 const ProjectStyled = styled.div`
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 100%;
   place-items: center;
+
   color: white;
   width: 100%;
+  @media (max-width: 970px) {
+  }
+  @media (max-width: 768px) {
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 375px) {
+  }
 `

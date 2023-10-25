@@ -14,7 +14,7 @@ export default function SoftSkills() {
         </div>
       </div>
       <div className=" section haut_droite">
-        <h2 className="card_title">Adaptabilité </h2>
+        <h3 className="card_title">Adaptabilité </h3>
         <div className="desc">
           Face aux imprévus, je m'adapte et évolue, transformant les défis en
           opportunités d'apprentissage et de croissance.
@@ -24,8 +24,8 @@ export default function SoftSkills() {
       <div className=" section bas_gauche">
         <h3 className="card_title">Autonomie</h3>
         <div className="desc">
-          Indépendant et proactif, je prends des initiatives, mène mes projets
-          avec diligence.
+          ndépendant et proactif, je prends des initiatives, mène mes projets
+          avec diligence et transforme chaque vision en réalisation concrète
         </div>
         <img src="src\assets\compass_1897493.png" className="autonomy" alt="" />
       </div>
@@ -33,7 +33,7 @@ export default function SoftSkills() {
         <h3 className="card_title">Curiosité </h3>
         <div className="desc">
           Toujours en quête d'apprendre, ma curiosité alimente mon désir
-          d'innovation et de découverte dans le développement."
+          d'innovation et de découverte dans le développement.
         </div>
         <img
           src="src\assets\question_1111568.png"
@@ -72,7 +72,7 @@ const SoftSkillsStyled = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     .desc {
       z-index: 2;
       text-align: start;
@@ -90,7 +90,7 @@ const SoftSkillsStyled = styled.div`
     img {
       position: absolute;
       height: 90px;
-      left: -12%;
+      left: 45%;
       transform: translateY(-85%);
       filter: blur(0.5px);
       top: 17%;
@@ -100,8 +100,8 @@ const SoftSkillsStyled = styled.div`
     img {
       position: absolute;
       height: 90px;
-      left: 75%;
-      transform: translateY(-75%);
+      left: 45%;
+      transform: translateY(-65%);
       filter: blur(0.5px);
     }
   }
@@ -109,8 +109,8 @@ const SoftSkillsStyled = styled.div`
     img {
       position: absolute;
       height: 90px;
-      left: 80%;
-      transform: translateY(95%);
+      left: 45%;
+      transform: translateY(115%);
       filter: blur(0.5px);
     }
   }
@@ -119,9 +119,33 @@ const SoftSkillsStyled = styled.div`
     img {
       position: absolute;
       height: 90px;
-      left: -13%;
-      transform: translateY(85%);
+      left: 45%;
+      transform: translateY(115%);
       filter: blur(0.5px);
+    }
+  }
+  @media (max-width: 970px) {
+    .section img {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .title {
+      white-space: nowrap;
+    }
+    .section img {
+      display: none;
+    }
+  }
+  @media (max-width: 480px) {
+    .section img {
+      display: none;
+    }
+  }
+  @media (max-width: 375px) {
+    width: 100%;
+    .section img {
+      display: none;
     }
   }
 `

@@ -16,11 +16,29 @@ export default function Carousel() {
           perPage: 3,
           gap: "30px",
           type: "loop",
+          drag: false,
           breakpoints: {
-            400: {
+            970: {
               perPage: 1,
-              fixedHeight: 400,
-              width: "400",
+              width: "600px",
+              drag: true,
+            },
+            768: {
+              perPage: 1,
+              width: "100%",
+              drag: true,
+            },
+            480: {
+              perPage: 1,
+              width: "150%",
+              // fixedWidth: "400px",
+              drag: true,
+            },
+            375: {
+              perPage: 1,
+              width: "100%",
+              // fixedWidth: "400px",
+              drag: true,
             },
           },
           snap: true,
@@ -100,8 +118,8 @@ const CarouselStyled = styled.div`
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
 
   img {
     max-width: 100%;
@@ -115,16 +133,6 @@ const CarouselStyled = styled.div`
     transition: 0.5s;
 
     top: 0;
-    /* 
-    &:hover {
-      filter: brightness(0.5) blur(3px);
-      zoom: 2;
-
-      &::before {
-        content: "OUI C MOI";
-        color: red;
-      }
-    } */
   }
   .splide__slide:hover {
     transition: 0.5s;
@@ -134,9 +142,9 @@ const CarouselStyled = styled.div`
     .desc_project {
       opacity: 1;
       filter: brightness(1);
-      left: 50%;
-      top: 30%;
-      transform: translate(-50%);
+      /* left: 50%; */
+      /* top: 30%; */
+      transform: translateY(80%);
     }
   }
   .desc_project {
@@ -164,5 +172,26 @@ const CarouselStyled = styled.div`
         fill: #ffba31;
       }
     }
+  }
+  @media (max-width: 970px) {
+    width: 100%;
+    .splide__slide img {
+      width: 100%;
+    }
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    height: 100%;
+    /* .splide__slide img {
+      width: 100%;
+    } */
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 375px) {
+    width: 375px;
+    height: 100%;
   }
 `

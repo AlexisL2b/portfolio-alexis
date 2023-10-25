@@ -24,4 +24,17 @@ const SkillsSetStyled = styled.div`
   place-items: center;
   color: white;
   width: 100%;
+  @media (max-width: 970px) {
+  }
+  @media (max-width: 768px) {
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 375px) {
+  }
 `

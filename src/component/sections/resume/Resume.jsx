@@ -11,6 +11,7 @@ export default function Resume() {
         labelprimary={"MY "}
         labelsecondary={"EXPERIENCE"}
         undertitle={"RESUME"}
+        classname={"title_component"}
       />
       {/* <ResumeDesc /> */}
       <div className="row experience">
@@ -42,7 +43,7 @@ export default function Resume() {
         />
         <ResumeCard
           years={"2022-2023"}
-          title={"Développement web et design pour projet client"}
+          title={"Développement web et design "}
           content={
             "En collaboration étroite avec mes clients, j'ai identifié et répondu à leurs besoins métier, développant ainsi des sites web adaptés et des solutions à leurs problématiques rencontrées."
           }
@@ -67,5 +68,39 @@ const ResumeStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
+  }
+  @media (max-width: 970px) {
+    width: 100%;
+
+    .row {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    grid-template-rows: 2fr repeat(4, 2fr);
+    /* justify-content: center; */
+    place-items: normal;
+
+    .title_component {
+      font-size: 190%;
+    }
+
+    .row {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 375px) {
+    grid-template-rows: 2fr repeat(4, 2fr);
+    place-items: normal;
+    justify-content: center;
+    .title_component {
+      font-size: 150%;
+      position: relative;
+    }
+    .row {
+      grid-template-columns: 1fr;
+    }
   }
 `

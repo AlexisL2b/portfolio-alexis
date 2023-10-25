@@ -94,9 +94,35 @@ const SkillsStyled = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 1240px;
+  width: 70%;
   height: 620px;
   align-self: center;
   justify-self: center;
   margin-top: 50px;
+  @media (max-width: 970px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: 1240px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 1240px;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 1240px;
+    padding: 20px;
+    align-self: center;
+    justify-self: center;
+  }
+  @media (max-width: 375px) {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    align-self: flex-start;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
 `

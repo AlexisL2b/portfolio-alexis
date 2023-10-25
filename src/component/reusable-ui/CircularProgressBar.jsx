@@ -74,4 +74,31 @@ const ProgressCircleStyled = styled.div`
     margin-top: 10px;
     text-align: center;
   }
+  @media (max-width: 970px) {
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+    .circle {
+      width: 66%;
+      height: 66%;
+      left: 15%;
+      .icon img {
+        width: 25%;
+        height: 25%;
+      }
+      h3 {
+        left: 10;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    .circle {
+    }
+  }
 `

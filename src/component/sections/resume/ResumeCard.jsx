@@ -24,6 +24,7 @@ export default function ResumeCard({
 
 const ResumeCardStyled = styled.div`
   /* border: 1px solid red; */
+  height: 80%;
   display: flex;
   flex-direction: column;
   padding: 8px;
@@ -56,5 +57,20 @@ const ResumeCardStyled = styled.div`
     font-size: 24px;
     font-weight: 900;
     color: #ffba31;
+  }
+  @media (max-width: 970px) {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    height: 100%;
+  }
+  @media (max-width: 480px) {
+    height: 100%;
+  }
+  @media (max-width: 375px) {
+    height: 100%;
+
+    width: 100%;
   }
 `

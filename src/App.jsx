@@ -23,6 +23,9 @@ export default function App() {
   )
 }
 const AppStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .slide-in-blurred-right-appear {
     -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
     transform: translateX(1000px) scaleX(2.5) scaleY(0.2);

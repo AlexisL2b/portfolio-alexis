@@ -4,9 +4,9 @@ import { theme } from "../../../../theme"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import { animations } from "../../../../theme/animations"
 
-export default function IntroductionAboutMe() {
+export default function IntroductionAboutMe(classname) {
   return (
-    <IntroductionAboutMeStyled>
+    <IntroductionAboutMeStyled classname={classname}>
       <div className="title">
         <h2>INFORMATION PERSONNEL</h2>
       </div>
@@ -88,5 +88,105 @@ const IntroductionAboutMeStyled = styled.div`
     letter-spacing: 10px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
     text-align: center;
+  }
+  @media (max-width: 970px) {
+    height: 70%;
+    width: 70%;
+    display: grid;
+
+    .title {
+      grid-column: span 2;
+      width: 70%;
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      transform: translate(-50%, -85%);
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    li {
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+      /* margin: 15px 0px; */
+    }
+  }
+  @media (max-width: 768px) {
+    height: 40%;
+    width: 100%;
+    display: grid;
+
+    .title {
+      grid-column: span 2;
+      width: 70%;
+      position: absolute;
+      left: 50%;
+      transform: translate(0% -85%);
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    li {
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+      /* margin: 15px 0px; */
+    }
+  }
+  @media (max-width: 480px) {
+    height: 40%;
+    width: 110%;
+
+    .title {
+      grid-column: span 2;
+      width: 70%;
+      position: absolute;
+      left: 50%;
+
+      /* left: 50%;
+      top: -10px; */
+      transform: translate(0% -85%);
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    li {
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      /* margin: 15px 0px; */
+    }
+  }
+  @media (max-width: 375px) {
+    height: 50%;
+    width: 80%;
+    grid-template-columns: 1fr;
+
+    .title {
+      grid-column: span 2;
+      width: 70%;
+      position: absolute;
+      left: 50%;
+
+      transform: translate(0% -85%);
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    li {
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      /* margin: 15px 0px; */
+    }
   }
 `

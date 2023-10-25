@@ -12,6 +12,7 @@ import CasinoEffect from "./second-page/main/Main"
 import Carousel from "../sections/Carousel"
 import SkillsSet from "../sections/about-me/description/presentation/skills/SkillsSet"
 import Project from "../sections/project/Project"
+import { theme } from "../../theme"
 
 export default function FirstPage() {
   const [section, setSection] = useState("")
@@ -81,7 +82,8 @@ const FirstPageStyled = styled.div`
   padding: 80px;
   display: flex;
   justify-content: center;
-
+  flex-direction: column;
+  /* 
   &::before {
     content: "";
     background: url("src/assets/pawel-nolbert-4u2U8EO9OzY-unsplash.jpg")
@@ -95,7 +97,7 @@ const FirstPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
-  }
+  } */
 
   .puff-in-center-appear {
     transform: translateY(100%);
@@ -118,13 +120,27 @@ const FirstPageStyled = styled.div`
   }
 
   .puff-in-center-exit {
-    position: absolute;
     transform: translateY(0);
     opacity: 1;
   }
   .puff-in-center-exit-active {
+    position: absolute;
+    left: -50px;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: 0.7s;
+  }
+  /* .puff-in-center-exit-done {
     transform: translateY(-1000px);
     opacity: 0;
     transition: 0.7s;
+  } */
+  @media (max-width: 970px) {
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+  }
+  @media (max-width: 375px) {
   }
 `

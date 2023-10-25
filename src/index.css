@@ -24,6 +24,33 @@ body {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
+
+  height: 100vh;
+  content: "";
+  background: url("src/assets/pawel-nolbert-4u2U8EO9OzY-unsplash.jpg")
+    rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+body :before {
+}
+@media (max-width: 768px) {
+  body {
+    background-size: auto; /* ou toute autre valeur désirée pour les tablettes */
+  }
+}
+
+/* Pour les mobiles */
+@media (max-width: 480px) {
+  body {
+    background-size: auto; /* ou toute autre valeur désirée pour les mobiles */
+  }
 }
 
 code {

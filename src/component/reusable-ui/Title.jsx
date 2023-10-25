@@ -2,9 +2,14 @@ import React from "react"
 import { styled } from "styled-components"
 import { theme } from "../../theme"
 
-export default function Title({ labelprimary, labelsecondary, undertitle }) {
+export default function Title({
+  labelprimary,
+  labelsecondary,
+  undertitle,
+  classname,
+}) {
   return (
-    <TitleStyled>
+    <TitleStyled className={classname}>
       <div className="under-title">{undertitle}</div>
       <div className="title">
         <span className="label1">{labelprimary} </span>
@@ -15,7 +20,8 @@ export default function Title({ labelprimary, labelsecondary, undertitle }) {
 }
 
 const TitleStyled = styled.div`
-  text-align: center;
+  white-space: nowrap;
+
   font-size: 80px;
   font-weight: 900;
   width: 50%;
@@ -24,6 +30,8 @@ const TitleStyled = styled.div`
     position: relative;
     z-index: 1;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
+    display: flex;
+    justify-content: center;
     .label2 {
       color: #ffba31;
     }
@@ -44,6 +52,34 @@ const TitleStyled = styled.div`
       rgba(207, 179, 18, 0.5),
       rgba(226, 15, 15, 0.2)
     );
+  }
+  @media (max-width: 970px) {
+    font-size: 48px;
+
+    .under-title {
+      font-size: 90px;
+    }
+  }
+  @media (max-width: 768px) {
+    font-size: 48px;
+
+    .under-title {
+      font-size: 90px;
+    }
+  }
+  @media (max-width: 480px) {
+    font-size: 40px;
+    .under-title {
+      display: none;
+    }
+  }
+  @media (max-width: 375px) {
+    font-size: 36px;
+    white-space: normal;
+
+    .under-title {
+      display: none;
+    }
   }
   /* .under-title {
     font-size: 5em;

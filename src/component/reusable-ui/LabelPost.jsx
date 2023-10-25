@@ -45,6 +45,16 @@ const secondarySmall = css`
   text-align: center;
   justify-content: center;
   width: 40%;
+  @media (max-width: 970px) {
+  }
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 480px) {
+  }
+  @media (max-width: 375px) {
+    width: 50%;
+  }
 `
 
 const extraStyle = {
