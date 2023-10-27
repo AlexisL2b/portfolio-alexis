@@ -1,7 +1,7 @@
 import React from "react"
 import { styled } from "styled-components"
 import Title from "../../reusable-ui/Title"
-import Carousel from "../Carousel/"
+import Carousel from "./Carousel"
 
 export default function Project() {
   return (

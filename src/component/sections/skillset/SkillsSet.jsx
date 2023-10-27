@@ -1,6 +1,6 @@
 import React from "react"
 import { styled } from "styled-components"
-import Title from "../../../../../reusable-ui/Title"
+import Title from "../../reusable-ui/Title"
 import Skills from "./Skills"
 
 export default function SkillsSet() {

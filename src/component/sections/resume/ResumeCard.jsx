@@ -1,8 +1,6 @@
 import React from "react"
 import { styled } from "styled-components"
 import LabelPost from "../../reusable-ui/LabelPost"
-import Button from "../../reusable-ui/Button"
-import ModalButton from "../../reusable-ui/ModalButton"
 
 export default function ResumeCard({
   years,
@@ -44,15 +42,7 @@ const ResumeCardStyled = styled.div`
     /* margin-top: 10px;   */
     margin-bottom: 18px;
   }
-  .modal-button {
-    height: 50px;
-    width: 50px;
-    -webkit-border-radius: 150px;
-    border-radius: 150px;
-    background: #42464d;
-    -webkit-box-shadow: 12px 12px 24px #383c41, -12px -12px 24px #4c5159;
-    box-shadow: 12px 12px 24px #383c41, -12px -12px 24px #4c5159;
-  }
+
   .city {
     font-size: 24px;
     font-weight: 900;

@@ -1,11 +1,8 @@
 import React from "react"
 import { styled } from "styled-components"
 import Title from "../../reusable-ui/Title"
-import DescriptionAboutMe from "./description/DescriptionAboutMe"
-import { TransitionGroup } from "react-transition-group"
-import IntroductionAboutMe from "./description/IntroductionAboutMe"
-import Skills from "./description/presentation/skills/Skills"
-import SoftSkills from "./description/presentation/SoftSkills"
+import SoftSkills from "./SoftSkills"
+import IntroductionAboutMe from "./IntroductionAboutMe"
 
 export default function AboutMe({ className }) {
   return (

@@ -3,8 +3,6 @@ import { styled } from "styled-components"
 import MenuButton from "../MenuButton"
 import { getMenuButtonsConfig } from "../menuButtonConfig"
 import { MdContactSupport } from "react-icons/md"
-import Doted from "../../reusable-ui/Doted"
-import { CSSTransition, TransitionGroup } from "react-transition-group"
 import FirstPageContext from "../../pages/FirstPageContext"
 
 export default function Menu() {

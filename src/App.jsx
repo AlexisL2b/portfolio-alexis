@@ -1,9 +1,6 @@
 import React from "react"
 import FirstPage from "./component/pages/FirstPage"
 import { styled } from "styled-components"
-import SecondPage from "./component/pages/second-page/SecondPage"
-import Menu from "./component/menu/menu-sidebar-right/MenuRight"
-import { CSSTransition } from "react-transition-group"
 
 export default function App() {
   return (

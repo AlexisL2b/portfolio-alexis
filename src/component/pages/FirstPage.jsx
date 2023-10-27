@@ -5,16 +5,15 @@ import Menu from "../menu/menu-sidebar-right/MenuRight"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import AboutMe from "../sections/about-me/AboutMe"
 import Resume from "../sections/resume/Resume"
-import FirstPageContext from "./FirstPageContext"
-import SkillsSet from "../sections/about-me/description/presentation/skills/SkillsSet"
+import SkillsSet from "../sections/skillset/SkillsSet"
 import Project from "../sections/project/Project"
 import Contact from "../sections/contact/Contact"
+import FirstPageContext from "./FirstPageContext"
 
 export default function FirstPage() {
   const [section, setSection] = useState("")
-  const [showModal, setShowModal] = useState("")
 
-  const FirstPageValue = { section, setSection, showModal, setShowModal }
+  const FirstPageValue = { section, setSection }
 
   return (
     <TransitionGroup component={FirstPageStyled}>

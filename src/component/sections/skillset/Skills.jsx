@@ -1,10 +1,6 @@
 import React, { useState } from "react"
 import { styled } from "styled-components"
-import LeftSideSkills from "./LeftSideSkills"
-import RightSideSkills from "./RightSideSkills"
-import { TransitionGroup } from "react-transition-group"
-import CircularProgressBar from "../../../../../reusable-ui/CircularProgressBar"
-import Title from "../../../../../reusable-ui/Title"
+import CircularProgressBar from "../../reusable-ui/CircularProgressBar"
 
 export default function Skills() {
   const [isSelected, setIsSelected] = useState("")

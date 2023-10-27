@@ -57,12 +57,16 @@ export default function Carousel() {
               // onMouseEnter={setHoverable("crazee")}
             />
             <div className="desc_project">
-              <h3>DESC</h3>
+              <h3>Crazee-burger</h3>
               <p className="desc">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur earum repellendus unde veniam autem explicabo at ut
-                error officiis sunt, iste voluptates cum similique, veritatis
-                repellat ipsa sapiente. Explicabo, consequuntur?
+                Crazee-burger, une application conçue en React qui sert
+                d'échantillon de ce que cette technologie peut offrir.
+                L'application, centrée sur la commande de fast-food, intègre une
+                base de données Firebase et un panneau d'administration. Bien
+                qu'elle ne soit pas encore fonctionnelle et responsive, elle
+                préfigure le développement d'une version en React Native.
+                "Crazee-burger" témoigne de la diversité et de la complexité des
+                projets que l'on peut réaliser avec React.
               </p>
             </div>
           </SplideSlide>
@@ -76,12 +80,15 @@ export default function Carousel() {
               // onMouseEnter={setHoverable("aflokkat")}
             />
             <div className="desc_project">
-              <h3>DESC</h3>
+              <h3>AfloSchool</h3>
               <p className="desc">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur earum repellendus unde veniam autem explicabo at ut
-                error officiis sunt, iste voluptates cum similique, veritatis
-                repellat ipsa sapiente. Explicabo, consequuntur?
+                AfloSchool est une application web responsive conçue pour la
+                gestion de planning éducatif. Elle offre aux élèves et
+                professeurs la possibilité de consulter leurs plannings, tandis
+                que le rôle admin peut les modifier. Développée en collaboration
+                avec un camarade pour notre certification, ce projet a été
+                réalisé en utilisant fullcalendar.js et repose sur une base de
+                données MySQL.
               </p>
             </div>
           </SplideSlide>
@@ -94,12 +101,14 @@ export default function Carousel() {
               onMouseLeave={() => setHoverable("")}
             />
             <div className="desc_project">
-              <h3>DESC</h3>
+              <h3>Beluga-Diving</h3>
               <p className="desc">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur earum repellendus unde veniam autem explicabo at ut
-                error officiis sunt, iste voluptates cum similique, veritatis
-                repellat ipsa sapiente. Explicabo, consequuntur?
+                Beluga-Diving est un site vitrine conçu pour mettre en avant une
+                entreprise familiale spécialisée en plongée sous-marine.
+                Initialement créé avec WordPress, le site a ensuite été repensé
+                et développé avec Joomla pour relever un défi. La version
+                finale, basée sur Joomla, est multilingue et a été élaborée en
+                utilisant le framework Asteroid
               </p>
             </div>
           </SplideSlide>
@@ -156,7 +165,12 @@ const CarouselStyled = styled.div`
     transform: translateY(-50%);
     transition: all 0.5s;
     opacity: 0;
+
     text-align: center;
+    .desc {
+      margin-top: 20px;
+      font-weight: 700;
+    }
   }
 
   .slide {

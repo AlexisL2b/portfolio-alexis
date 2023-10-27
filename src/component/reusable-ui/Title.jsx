@@ -81,33 +81,4 @@ const TitleStyled = styled.div`
       display: none;
     }
   }
-  /* .under-title {
-    font-size: 5em;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.2)
-    );
-    position: relative;
-  }
-
-  .under-title::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    z-index: -1;
-    color: rgba(0, 0, 0, 0.3);
-  }
-
-  .under-title::after {
-    content: attr(data-text);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    z-index: -1;
-    color: rgba(255, 255, 255, 0.2);
-  } */
 `

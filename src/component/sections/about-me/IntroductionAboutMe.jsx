@@ -1,8 +1,8 @@
 import React from "react"
 import { styled } from "styled-components"
-import { theme } from "../../../../theme"
+import { theme } from "../../../theme"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
-import { animations } from "../../../../theme/animations"
+import { animations } from "../../../theme/animations"
 
 export default function IntroductionAboutMe(classname) {
   return (
