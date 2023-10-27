@@ -1,33 +1,46 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
-import "./App.css"
+import React from "react"
+import FirstPage from "./component/pages/FirstPage"
+import { styled } from "styled-components"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>Hello Alex</p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <AppStyled>
+      {/* <CSSTransition
+        in={true}
+        appear={true}
+        timeout={700}
+        classNames="slide-in-blurred-right"
+      >
+        <Menu />
+      </CSSTransition> */}
+
+      <FirstPage />
+      {/* <SecondPage /> */}
+    </AppStyled>
   )
 }
-
-export default App
+const AppStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .slide-in-blurred-right-appear {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  .slide-in-blurred-right-appear-active {
+    transition: 700ms;
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+  scrollbar-width: none;
+`
