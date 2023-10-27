@@ -33,7 +33,12 @@ export default function Menu() {
             {/* <Doted version={"right"} /> */}
           </div>
         ))}
-        <MenuButton icon={<MdContactSupport />} key={5} />
+        <MenuButton
+          icon={<MdContactSupport />}
+          id={"contact"}
+          key={5}
+          onClick={onClick}
+        />
       </div>
     </MenuStyled>
   )

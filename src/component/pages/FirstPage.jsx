@@ -6,13 +6,9 @@ import { CSSTransition, TransitionGroup } from "react-transition-group"
 import AboutMe from "../sections/about-me/AboutMe"
 import Resume from "../sections/resume/Resume"
 import FirstPageContext from "./FirstPageContext"
-import Skills from "../sections/about-me/description/presentation/skills/Skills"
-import CircularProgressBar from "../reusable-ui/CircularProgressBar"
-import CasinoEffect from "./second-page/main/Main"
-import Carousel from "../sections/Carousel"
 import SkillsSet from "../sections/about-me/description/presentation/skills/SkillsSet"
 import Project from "../sections/project/Project"
-import { theme } from "../../theme"
+import Contact from "../sections/contact/Contact"
 
 export default function FirstPage() {
   const [section, setSection] = useState("")
@@ -70,6 +66,15 @@ export default function FirstPage() {
         >
           <Project />
         </CSSTransition>
+        <CSSTransition
+          appear={true}
+          classNames={"puff-in-center"}
+          timeout={700}
+          in={section === "contact" ? true : false}
+          unmountOnExit
+        >
+          <Contact />
+        </CSSTransition>
       </FirstPageContext.Provider>
     </TransitionGroup>
   )
@@ -82,22 +87,8 @@ const FirstPageStyled = styled.div`
   padding: 80px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  /* 
-  &::before {
-    content: "";
-    background: url("src/assets/pawel-nolbert-4u2U8EO9OzY-unsplash.jpg")
-      rgba(0, 0, 0, 0.7);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: darken;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  } */
 
   .puff-in-center-appear {
     transform: translateY(100%);
@@ -105,35 +96,39 @@ const FirstPageStyled = styled.div`
 
   .puff-in-center-appear-active {
     transform: translateY(0%);
-    transition: 0.7s;
+    transition: 0.5s;
   }
   .puff-in-center-enter {
     transform: translateY(100%);
   }
   .puff-in-center-enter-active {
     transform: translateY(0%);
-    transition: 0.7s;
+    transition: 0.5s;
   }
   .puff-in-center-enter-done {
     transform: translateY(0%);
-    transition: 0.7s;
+    transition: 0.5s;
   }
 
   .puff-in-center-exit {
-    transform: translateY(0);
+    position: absolute;
+    transform: translateY(0%);
     opacity: 1;
+    bottom: 0;
+    align-self: center;
+    justify-self: center;
+    right: 0;
   }
   .puff-in-center-exit-active {
-    position: absolute;
-    left: -50px;
-    transform: translateY(-150%);
+    transform: translateY(-200%);
+
     opacity: 0;
-    transition: 0.7s;
+    transition: 0.5s;
   }
   /* .puff-in-center-exit-done {
     transform: translateY(-1000px);
     opacity: 0;
-    transition: 0.7s;
+    transition: 5s;
   } */
   @media (max-width: 970px) {
   }
