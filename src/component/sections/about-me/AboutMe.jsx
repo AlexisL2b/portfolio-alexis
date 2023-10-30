@@ -3,7 +3,6 @@ import { styled } from "styled-components"
 import Title from "../../reusable-ui/Title"
 import SoftSkills from "./SoftSkills"
 import IntroductionAboutMe from "./IntroductionAboutMe"
-
 export default function AboutMe({ className }) {
   return (
     <AboutMeStyled className={className}>

@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { styled } from "styled-components"
 import { useForm } from "react-hook-form"
 import { theme } from "../../../theme"
 import emailjs from "@emailjs/browser"
+import { BsCheckCircleFill } from "react-icons/bs"
 
 export default function ContactForm() {
   const {
@@ -11,6 +12,7 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm()
 
+  const [isVisible, setIsVisible] = useState(false)
   const onSubmit = (data, r) => {
     const templateId = "template_fd9zkto"
     const serviceID = "service_mfxn4qi"
@@ -22,6 +24,12 @@ export default function ContactForm() {
       message: data.message,
       reply_to: r.target.reset(),
     })
+    setIsVisible(true)
+
+    const timer = setTimeout(() => {
+      setIsVisible(false)
+    }, 2000)
+    return () => clearTimeout(timer)
   }
 
   const sendFeedback = (serviceID, templateId, data) => {
@@ -93,7 +101,12 @@ export default function ContactForm() {
         />
         <label htmlFor={"message"}>Message</label>
       </div>
-      <button type="submit">Send</button>
+      <div className="submit_confirmation">
+        <button type="submit">Send</button>
+        <div className={isVisible ? "visible" : "invisible"}>
+          <BsCheckCircleFill />
+        </div>
+      </div>
     </ContactFormStyled>
   )
 }
@@ -115,7 +128,7 @@ const ContactFormStyled = styled.form`
   gap: 10px;
 
   border-radius: 15px;
-  padding: 8px;
+  padding: 16px;
 
   .input_container {
     position: relative;
@@ -128,7 +141,7 @@ const ContactFormStyled = styled.form`
       left: 39%;
       /* transform: translate(-50%, -50%); */
       color: white;
-      /* pointer-events: none; */
+      pointer-events: none;
     }
     textarea {
       background: rgba(232, 232, 232, 0.65);
@@ -203,21 +216,35 @@ const ContactFormStyled = styled.form`
       }
     }
   }
-  button {
-    width: 50%;
-    align-self: center;
-    justify-self: center;
-    margin: 8px;
-    height: 28px;
-    background-color: #0bc12746;
-    border: 1px solid white;
-    border-radius: 5px;
-    font-family: ${theme.fonts.open};
-    font-weight: 900;
-    color: white;
-    cursor: pointer;
-    &:hover {
-      background-color: #0bc1267e;
+  .submit_confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      width: 50%;
+      align-self: center;
+      justify-self: center;
+      margin: 8px;
+      height: 28px;
+      background-color: #0bc12746;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-family: ${theme.fonts.open};
+      font-weight: 900;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: #0bc1267e;
+      }
+    }
+    .visible {
+      display: flex;
+      align-items: center;
+      color: #0bc1267e;
+      font-size: 24px;
+    }
+    .invisible {
+      display: none;
     }
   }
 `

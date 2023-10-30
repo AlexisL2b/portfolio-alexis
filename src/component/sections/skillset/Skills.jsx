@@ -1,6 +1,16 @@
 import React, { useState } from "react"
 import { styled } from "styled-components"
 import CircularProgressBar from "../../reusable-ui/CircularProgressBar"
+import html from "../../../assets/html.png"
+import css from "../../../assets/css.png"
+import js from "../../../assets/javascript.png"
+import php from "../../../assets/php.png"
+import react from "../../../assets/react.png"
+import jquery from "../../../assets/jquery.png"
+import styled_component from "../../../assets/styled-components.png"
+import wordpress from "../../../assets/wordpress.png"
+import joomla from "../../../assets/joomla_logo_icon_170506.png"
+import git from "../../../assets/Git-Icon-1788C.png"
 
 export default function Skills() {
   const [isSelected, setIsSelected] = useState("")
@@ -22,61 +32,61 @@ export default function Skills() {
         tech={"html"}
         color={"#f75421"}
         percentage={"90"}
-        img={"src/assets/html.png"}
+        img={html}
       />
       <CircularProgressBar
         tech={"CSS"}
         color={"#2862e9"}
         percentage={"90"}
-        img={"src/assets/css.png"}
+        img={css}
       />
       <CircularProgressBar
         tech={"JavaScript"}
         color={"#f7d701"}
         percentage={"70"}
-        img={"src/assets/javascript.png"}
+        img={js}
       />
       <CircularProgressBar
         tech={"Php"}
         color={"#959bc0"}
         percentage={"70"}
-        img={"src/assets/php.png"}
+        img={php}
       />
       <CircularProgressBar
         tech={"React"}
         color={"#5ed3f3"}
         percentage={"70"}
-        img={"src/assets/react.png"}
+        img={react}
       />
       <CircularProgressBar
         tech={"jquery"}
         color={"#0865a6"}
         percentage={"80"}
-        img={"src/assets/jquery.png"}
+        img={jquery}
       />
       <CircularProgressBar
         tech={"styled-component"}
         color={"#ef85c6"}
         percentage={"90"}
-        img={"src/assets/styled-components.png"}
+        img={styled_component}
       />
       <CircularProgressBar
         tech={"wordpress"}
         color={"#00769d"}
         percentage={"65"}
-        img={"src/assets/wordpress.png"}
+        img={wordpress}
       />
       <CircularProgressBar
         tech={"joomla"}
         color={"#76bb41"}
         percentage={"50"}
-        img={"src/assets/joomla_logo_icon_170506.png"}
+        img={joomla}
       />
       <CircularProgressBar
         tech={"git"}
         color={"#f05033"}
         percentage={"85"}
-        img={"src/assets/Git-Icon-1788C.png"}
+        img={git}
       />
     </SkillsStyled>
   )
@@ -90,8 +100,10 @@ const SkillsStyled = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 70%;
-  height: 620px;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 60px;
+  width: auto;
+  height: auto;
   align-self: center;
   justify-self: center;
   margin-top: 50px;

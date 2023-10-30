@@ -2,6 +2,9 @@ import React, { useState } from "react"
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide"
 import { styled } from "styled-components"
 import "@splidejs/react-splide/css/sea-green"
+import crazee_burger from "../../../assets/Crazee-Burger-Alexis(1).png"
+import aflokkat from "../../../assets/aflokkat.png"
+import beluga from "../../../assets/beluga-diving.png"
 
 export default function Carousel() {
   const [hoverable, setHoverable] = useState("")
@@ -18,9 +21,14 @@ export default function Carousel() {
           type: "loop",
           drag: false,
           breakpoints: {
+            1440: {
+              perPage: 2,
+              width: "auto",
+              drag: true,
+            },
             970: {
               perPage: 1,
-              width: "600px",
+              width: "auto",
               drag: true,
             },
             768: {
@@ -30,7 +38,7 @@ export default function Carousel() {
             },
             480: {
               perPage: 1,
-              width: "150%",
+              width: "auto",
               // fixedWidth: "400px",
               drag: true,
             },
@@ -49,7 +57,7 @@ export default function Carousel() {
         <SplideTrack className="slide">
           <SplideSlide className="slide_img">
             <img
-              src="src\assets\Crazee-Burger-Alexis(1).png"
+              src={crazee_burger}
               alt="crazee"
               onMouseEnter={() => setHoverable("crazee")}
               onMouseLeave={() => setHoverable("")}
@@ -73,7 +81,7 @@ export default function Carousel() {
 
           <SplideSlide className="slide_img">
             <img
-              src="src\assets\aflokkat.png"
+              src={aflokkat}
               alt="aflokkat"
               onMouseEnter={() => setHoverable("aflokkat")}
               onMouseLeave={() => setHoverable("")}
@@ -94,7 +102,7 @@ export default function Carousel() {
           </SplideSlide>
           <SplideSlide className="slide_img">
             <img
-              src="src\assets\beluga-diving.png"
+              src={beluga}
               alt="beluga"
               // onMouseEnter={setHoverable("beluga")}
               onMouseEnter={() => setHoverable("beluga")}
@@ -119,7 +127,7 @@ export default function Carousel() {
 }
 const CarouselStyled = styled.div`
   width: 80%;
-  height: 80%;
+  height: auto;
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2.5px);
@@ -129,6 +137,8 @@ const CarouselStyled = styled.div`
   display: flex;
   align-self: center;
   justify-self: center;
+  justify-content: center;
+  align-items: center;
 
   img {
     max-width: 100%;
@@ -153,7 +163,7 @@ const CarouselStyled = styled.div`
       filter: brightness(1);
       /* left: 50%; */
       /* top: 30%; */
-      transform: translateY(80%);
+      transform: translateY(20%);
     }
   }
   .desc_project {
@@ -161,8 +171,8 @@ const CarouselStyled = styled.div`
     transition: 0.8s;
     position: absolute;
     left: 0%;
-    top: 0%;
-    transform: translateY(-50%);
+    top: 0;
+    transform: translateY(100%);
     transition: all 0.5s;
     opacity: 0;
 
@@ -201,7 +211,7 @@ const CarouselStyled = styled.div`
     } */
   }
   @media (max-width: 480px) {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   @media (max-width: 375px) {

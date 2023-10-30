@@ -22,7 +22,7 @@ export default function ResumeCard({
 
 const ResumeCardStyled = styled.div`
   /* border: 1px solid red; */
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 8px;

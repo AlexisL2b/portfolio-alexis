@@ -51,7 +51,7 @@ export default function IntroductionAboutMe(classname) {
   )
 }
 const IntroductionAboutMeStyled = styled.div`
-  height: 100%;
+  height: auto;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);

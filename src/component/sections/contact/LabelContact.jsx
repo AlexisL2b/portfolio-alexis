@@ -3,7 +3,11 @@ import { styled } from "styled-components"
 
 export default function LabelContact({ icon, label, href, onClick }) {
   return (
-    <LabelContactStyled href={href} onClick={onClick && onClick}>
+    <LabelContactStyled
+      href={href}
+      onClick={onClick && onClick}
+      target="_blank"
+    >
       <div className="icon">{icon}</div>
       <div className="label">{label}</div>
     </LabelContactStyled>
@@ -37,13 +41,14 @@ const LabelContactStyled = styled.a`
   }
 
   .icon {
-    font-size: 24px;
+    font-size: 150%;
     display: flex;
     margin-left: 5px;
     justify-self: center;
     align-items: center;
   }
   .label {
+    font-size: 100%;
     display: flex;
     align-items: center;
   }
@@ -55,5 +60,11 @@ const LabelContactStyled = styled.a`
   a:visited {
     text-decoration: none;
     color: inherit; /* Cela prend la couleur du texte environnant, mais vous pouvez également définir une couleur spécifique si vous le souhaitez. */
+  }
+  @media (max-width: 970px) {
+    width: 60%;
+  }
+  @media (max-width: 930px) {
+    width: auto;
   }
 `

@@ -19,11 +19,13 @@ export default function CircularProgressBar({ percentage, color, tech, img }) {
 
 const ProgressCircleStyled = styled.div`
   color: white;
-  width: 150px;
-  height: 150px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.58);
   /* align-self: center; */
   justify-self: center;
+  align-items: center;
   .circle {
     position: relative;
     width: 150px;

@@ -55,7 +55,7 @@ export default function Contact() {
           <LabelContact
             icon={<MdOutlineAlternateEmail />}
             label={"Email"}
-            href={'<a href="mailto:' + email}
+            href={"mailto:" + email}
           />
           <LabelContact
             icon={<RiTwitterLine />}
