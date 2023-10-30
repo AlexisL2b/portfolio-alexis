@@ -86,21 +86,12 @@ const ProgressCircleStyled = styled.div`
   @media (max-width: 768px) {
   }
   @media (max-width: 480px) {
-    .circle {
-      width: 66%;
-      height: 66%;
-      left: 15%;
-      .icon img {
-        width: 25%;
-        height: 25%;
-      }
-      h3 {
-        left: 10;
-      }
-    }
+    width: 100%;
+    height: 100%;
+    left: 15%;
   }
   @media (max-width: 375px) {
-    .circle {
-    }
+    width: 100%;
+    height: 100%;
   }
 `

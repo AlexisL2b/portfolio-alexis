@@ -123,6 +123,8 @@ const SkillsStyled = styled.div`
     padding: 20px;
     align-self: center;
     justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
   }
   @media (max-width: 375px) {
     width: 100%;

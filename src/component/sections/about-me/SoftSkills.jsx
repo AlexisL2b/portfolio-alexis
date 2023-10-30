@@ -34,7 +34,7 @@ export default function SoftSkills() {
           Autonomie <img src={compass} className="autonomy" alt="" />
         </h3>
         <div className="desc">
-          ndépendant et proactif, je prends des initiatives, mène mes projets
+          Indépendant et proactif, je prends des initiatives, mène mes projets
           avec diligence et transforme chaque vision en réalisation concrète
         </div>
       </div>
