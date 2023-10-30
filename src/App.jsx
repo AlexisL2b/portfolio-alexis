@@ -5,17 +5,7 @@ import { styled } from "styled-components"
 export default function App() {
   return (
     <AppStyled>
-      {/* <CSSTransition
-        in={true}
-        appear={true}
-        timeout={700}
-        classNames="slide-in-blurred-right"
-      >
-        <Menu />
-      </CSSTransition> */}
-
       <FirstPage />
-      {/* <SecondPage /> */}
     </AppStyled>
   )
 }
