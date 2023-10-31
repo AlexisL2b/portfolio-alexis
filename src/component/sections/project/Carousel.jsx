@@ -65,7 +65,14 @@ export default function Carousel() {
               // onMouseEnter={setHoverable("crazee")}
             />
             <div className="desc_project">
-              <h3>Crazee-burger</h3>
+              <h3>
+                <a
+                  href="https://crazee-burger-alexisl2b.vercel.app/"
+                  target="_blank"
+                >
+                  Crazee-burger
+                </a>
+              </h3>
               <p className="desc">
                 Crazee-burger, une application conçue en React qui sert
                 d'échantillon de ce que cette technologie peut offrir.
@@ -88,7 +95,11 @@ export default function Carousel() {
               // onMouseEnter={setHoverable("aflokkat")}
             />
             <div className="desc_project">
-              <h3>AfloSchool</h3>
+              <h3>
+                <a href="http://hatz4.art/login " target="_blank">
+                  AfloSchool
+                </a>
+              </h3>
               <p className="desc">
                 AfloSchool est une application web responsive conçue pour la
                 gestion de planning éducatif. Elle offre aux élèves et
@@ -109,7 +120,11 @@ export default function Carousel() {
               onMouseLeave={() => setHoverable("")}
             />
             <div className="desc_project">
-              <h3>Beluga-Diving</h3>
+              <h3>
+                <a href="https://www.beluga-diving.com/fr/" target="_blank">
+                  Beluga-Diving
+                </a>
+              </h3>
               <p className="desc">
                 Beluga-Diving est un site vitrine conçu pour mettre en avant une
                 entreprise familiale spécialisée en plongée sous-marine.
@@ -217,5 +232,16 @@ const CarouselStyled = styled.div`
   @media (max-width: 375px) {
     width: 375px;
     height: 100%;
+  }
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    text-decoration: none;
+    color: inherit; /* Cela prend la couleur du texte environnant, mais vous pouvez également définir une couleur spécifique si vous le souhaitez. */
+  }
+  a {
+    text-decoration: underline;
+    transition: text-decoration 1s;
   }
 `
